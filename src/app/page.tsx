@@ -42,7 +42,6 @@ export default function Home() {
             className="w-full h-auto cursor-pointer rounded-2xl"
             autoPlay
             loop
-            muted
             playsInline
             controlsList="nodownload nofullscreen noremoteplayback"
             disablePictureInPicture
