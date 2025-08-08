@@ -50,13 +50,12 @@ export default function Home() {
         </div>
 
         {/* Hero Video */}
-        <div className="mt-6 overflow-hidden rounded-2xl ring-1 ring-black/5">
+        <div className="mt-6 overflow-hidden rounded-2xl ring-1 ring-black/5 px-5">
           <video
             ref={videoRef}
             className="w-full h-auto cursor-pointer"
             autoPlay
             loop
-            muted
             playsInline
             controlsList="nodownload nofullscreen noremoteplayback"
             disablePictureInPicture
