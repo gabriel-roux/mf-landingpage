@@ -50,10 +50,10 @@ export default function Home() {
         </div>
 
         {/* Hero Video */}
-        <div className="mt-6 overflow-hidden rounded-2xl px-5 relative">
+        <div className="mt-6 overflow-hidden rounded-2xl px-5 relative h-[414px]">
           <video
             ref={videoRef}
-            className="w-full h-auto rounded-2xl"
+            className="w-full h-full rounded-2xl"
             loop
             playsInline
             controlsList="nodownload nofullscreen noremoteplayback"
@@ -68,7 +68,7 @@ export default function Home() {
           {/* Play/Pause Button */}
           <button
             onClick={handlePlayPause}
-            className="absolute inset-0 flex items-center justify-center "
+            className="absolute inset-0 flex items-center justify-center bg-transparent"
             aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
           >
             {!isPlaying && (
