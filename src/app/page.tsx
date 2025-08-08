@@ -50,12 +50,13 @@ export default function Home() {
         </div>
 
         {/* Hero Video */}
-        <div className="mt-6 overflow-hidden rounded-2xl px-5 relative h-[414px]">
+        <div className="mt-6 overflow-hidden rounded-2xl px-5 relative h-[364px]">
           <video
             ref={videoRef}
-            className="w-full h-full rounded-2xl"
+            className="w-full h-full rounded-2xl object-cover"
             loop
             playsInline
+            autoPlay
             controlsList="nodownload nofullscreen noremoteplayback"
             disablePictureInPicture
             onPlay={() => setIsPlaying(true)}
