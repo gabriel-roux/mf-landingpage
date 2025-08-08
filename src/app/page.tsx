@@ -53,7 +53,7 @@ export default function Home() {
         <div className="mt-6 overflow-hidden rounded-2xl px-5">
           <video
             ref={videoRef}
-            className="w-full h-auto cursor-pointer"
+            className="w-full h-auto cursor-pointer rounded-2xl"
             autoPlay
             loop
             playsInline
