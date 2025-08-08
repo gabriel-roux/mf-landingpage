@@ -1,9 +1,22 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
+  const handlePlayPause = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -39,16 +52,33 @@ export default function Home() {
         {/* Hero Video */}
         <div className="mt-6 overflow-hidden rounded-2xl px-5 relative">
           <video
-            className="w-full h-auto cursor-pointer rounded-2xl"
-            autoPlay
+            ref={videoRef}
+            className="w-full h-auto rounded-2xl"
             loop
             playsInline
             controlsList="nodownload nofullscreen noremoteplayback"
             disablePictureInPicture
+            onPlay={() => setIsPlaying(true)}
+            onPause={() => setIsPlaying(false)}
           >
             <source src="/apresentacao.mov" type="video/quicktime" />
             Your browser does not support the video tag.
           </video>
+          
+          {/* Play/Pause Button */}
+          <button
+            onClick={handlePlayPause}
+            className="absolute inset-0 flex items-center justify-center "
+            aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
+          >
+            {!isPlaying && (
+              <div className="bg-white/70 hover:bg-white p-0.5 rounded-full shadow-lg">
+                <svg className="w-14 h-14 text-gray-900" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                </svg>
+              </div>
+            )}
+          </button>
         </div>
 
         {/* Copy */}
