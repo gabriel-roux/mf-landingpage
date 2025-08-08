@@ -1,22 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Home() {
-  const [isPaused, setIsPaused] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handleVideoClick = () => {
-    if (videoRef.current) {
-      if (isPaused) {
-        videoRef.current.play();
-        setIsPaused(false);
-      } else {
-        videoRef.current.pause();
-        setIsPaused(true);
-      }
-    }
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -50,16 +37,15 @@ export default function Home() {
         </div>
 
         {/* Hero Video */}
-        <div className="mt-6 overflow-hidden rounded-2xl px-5">
+        <div className="mt-6 overflow-hidden rounded-2xl px-5 relative">
           <video
-            ref={videoRef}
             className="w-full h-auto cursor-pointer rounded-2xl"
             autoPlay
             loop
+            muted
             playsInline
             controlsList="nodownload nofullscreen noremoteplayback"
             disablePictureInPicture
-            onClick={handleVideoClick}
           >
             <source src="/apresentacao.mov" type="video/quicktime" />
             Your browser does not support the video tag.
