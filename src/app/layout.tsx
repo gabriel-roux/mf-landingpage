@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://myfamilybr.com"),
   title: {
-    default: "My Family — especialista em bonés desde 2016",
+    default: "My Family | especialista em bonés desde 2016",
     template: "%s | MF",
   },
   description:
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "lançamento",
   ],
   openGraph: {
-    title: "MF — especialista em bonés desde 2016",
+    title: "MF | especialista em bonés desde 2016",
     description:
       "A MF está de volta! Explore nossa coleção exclusiva e vista o estilo que conecta gerações. Confira agora!.",
     url: "/",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "MF — especialista em bonés",
+        alt: "MF | especialista em bonés",
       },
     ],
     locale: "pt_BR",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MF — especialista em bonés desde 2016",
+    title: "MF | especialista em bonés desde 2016",
     description:
       "A MF está de volta! Explore nossa coleção exclusiva e vista o estilo que conecta gerações. Confira agora!.",
     images: ["/og.jpg"],
