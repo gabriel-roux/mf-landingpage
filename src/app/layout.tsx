@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://myfamilybr.com"),
   title: {
-    default: "MF — especialista em bonés desde 2016",
+    default: "My Family — especialista em bonés desde 2016",
     template: "%s | MF",
   },
   description:
-    "A MF, marca especialista em bonés criada no RJ em 2016, está de volta. Entre no canal VIP e garanta o seu antes do lançamento oficial.",
+    "A MF está de volta! Explore nossa coleção exclusiva e vista o estilo que conecta gerações. Confira agora!.",
   keywords: [
     "MF",
     "MyFamily",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MF — especialista em bonés desde 2016",
     description:
-      "A MF, marca especialista em bonés criada no RJ em 2016, está de volta. Entre no canal VIP e garanta o seu antes do lançamento oficial.",
+      "A MF está de volta! Explore nossa coleção exclusiva e vista o estilo que conecta gerações. Confira agora!.",
     url: "/",
     siteName: "MF",
     images: [
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MF — especialista em bonés desde 2016",
     description:
-      "A MF, marca especialista em bonés criada no RJ em 2016, está de volta. Entre no canal VIP e garanta o seu antes do lançamento oficial.",
+      "A MF está de volta! Explore nossa coleção exclusiva e vista o estilo que conecta gerações. Confira agora!.",
     images: ["/og.jpg"],
   },
   alternates: { canonical: "/" },
