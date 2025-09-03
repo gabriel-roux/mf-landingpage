@@ -69,10 +69,10 @@ export default function Home() {
         {/* CTA */}
         <div className="mt-6 px-5">
           <a
-            href="https://whatsapp.com/channel/0029Vb5pSvo5Ui2ObcQq2i1I"
+            href="/shop"
             className="block rounded-xl bg-gradient-to-b from-emerald-500 to-emerald-600 px-6 py-7 text-center font-semibold text-white shadow-lg shadow-emerald-500/20 ring-1 ring-emerald-600/30 transition hover:brightness-110 active:brightness-95"
           >
-            ACESSAR CANAL VIP
+            ACESSAR SHOP
           </a>
         </div>
 
